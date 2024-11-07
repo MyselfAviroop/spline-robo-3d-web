@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34; /* Dark background */
+}
+
+#spline-container {
+    width: 80vw;  /* Width of the Spline model */
+    height: 80vh; /* Height of the Spline model */
+    overflow: hidden; /* Prevent overflow */
+}

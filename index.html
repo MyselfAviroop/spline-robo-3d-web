@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Robot</title>
+    <!-- Load Spline Runtime -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            color: #f0f0f0;
+            background-color: #000;
+        }
+
+        /* Fullscreen 3D viewer as background */
+        spline-viewer {
+            position: absolute;
+            top: 0;
+            margin-left: 300px;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            color: #f0f0f0;
+            z-index: 2;
+        }
+
+        /* Logo on the left */
+        .navbar .logo {
+            font-size: 1.5rem;
+            color: #f0f0f0;
+            margin-right: auto;
+        }
+
+        /* Centered nav items */
+        .navbar .nav-items {
+            display: flex;
+            gap: 25px;
+        }
+
+        .navbar .nav-items a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .navbar .nav-items a:hover {
+            color: #b01eff;
+        }
+
+        .navbar button {
+            background-color: #b01eff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            margin-left: 25px;
+        }
+
+        /* Text container */
+        .text-container {
+            position: relative;
+            width: 50%;
+            padding: 40px;
+            color: #fff;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            margin-left: 40px;
+        }
+
+        .text-container h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #b01eff;
+            text-shadow: 0 0 10px rgba(176, 30, 255, 0.7);
+            margin-bottom: 20px;
+        }
+
+        .text-container p {
+            font-size: 1.8rem;
+            line-height: 1.4;
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+        /* Footer styles */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            color: #f0f0f0;
+            font-size: 0.9rem;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">AI Robot World</div>
+        <div class="nav-items">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Explore</a>
+            <a href="#">Contact</a>
+        </div>
+       
+    </div>
+
+    <!-- Fullscreen 3D robot background -->
+    <spline-viewer url="https://prod.spline.design/yB6UV6aaiRGy2U0R/scene.splinecode"></spline-viewer>
+
+    <!-- Text overlay on the left side -->
+    <div class="text-container">
+        <h1>Step into Tomorrow</h1>
+        <p>Witness the future of robotics. Interact, engage, and explore a world where AI comes alive in 3D.</p>
+        <p>Technology, artistry, and innovation collide here. Are you ready?</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2024 Your Company. All Rights Reserved.
+    </div>
+</body>
+</html>
